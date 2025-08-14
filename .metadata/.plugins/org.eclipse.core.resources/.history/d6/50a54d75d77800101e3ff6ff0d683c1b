@@ -1,0 +1,8 @@
+package com.example.demo123.SpringJPA;
+
+public class Snippet {
+	public static void main(String[] args) {
+		SpringDataJPARepository
+	}
+}
+

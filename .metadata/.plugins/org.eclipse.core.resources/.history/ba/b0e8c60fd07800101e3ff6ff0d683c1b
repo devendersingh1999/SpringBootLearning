@@ -1,0 +1,11 @@
+package com.example.demo123.JPA;
+
+import org.springframework.stereotype.Repository;
+
+import jakarta.transaction.Transactional;
+
+@Repository
+//@Transactional
+public class CourseJPARepository {
+
+}
