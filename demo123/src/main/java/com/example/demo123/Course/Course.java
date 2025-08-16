@@ -10,7 +10,12 @@ public class Course {
 	long id;
 	String name;
 	String author;
-
+	
+	// JPA will always use the no-arg constructor (never the parameterized one).
+	// After creating the object, it sets fields directly (using reflection) 
+	// or via setters, depending on access strategy.
+	// The parameterized constructor is only for developer convenience 
+	// (to quickly create objects in code).
 	public Course() {
 		super();
 	}
