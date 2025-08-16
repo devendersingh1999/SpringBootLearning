@@ -8,6 +8,7 @@ import com.example.demo123.Course.Course;
 
 public interface SpringDataJPARepository  extends JpaRepository<Course, Long>{
 
+	//here we can write methods
 	List<Course> findByAuthor(String author);
 
 	
