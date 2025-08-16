@@ -27,7 +27,6 @@ public class CourseCommandLineRunnerJPA implements CommandLineRunner {
 		System.out.println(repository.findById(5l));
 		System.out.println(repository.findAll());
 		System.out.println(repository.findByAuthor("in28minutes"));
-		System.out.println();
 
 	}
 
