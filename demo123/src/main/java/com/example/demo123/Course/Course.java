@@ -6,6 +6,11 @@ import jakarta.persistence.Id;
 @Entity
 public class Course {
 
+@NoArgsConstructor   // generates no-arg constructor (needed by JPA)
+@AllArgsConstructor  // generates parameterized constructor
+@Getter // this will automatically create getter and setter
+@Setter
+	
 	@Id
 	long id;
 	String name;
