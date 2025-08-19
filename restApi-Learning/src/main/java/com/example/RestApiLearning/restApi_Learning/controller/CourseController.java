@@ -37,7 +37,7 @@ public class CourseController {
 	 */
 
 	@GetMapping("/course/{id}")
-	public Course getCourseDetails(@PathVariable long id) {
+	public Course getCourseDetails(@PathVariable Long id) {
 
 		Optional<Course> course = repository.findById(id);
 
@@ -47,36 +47,30 @@ public class CourseController {
 		return course.get();
 
 	}
-	
-	
-	//create new resource (course)
+
+	// create new resource (course)
 	@PostMapping("/course")
 	public void createCourse(@RequestBody Course course) {
-		
+
+		if (course != null) {
+			repository.save(course);
+
+		}
+	}
+
+	// update/replace the resource (course)
+	@PutMapping("/course/{id}")
+	public void updateCourse(@PathVariable Long id, @RequestBody Course course) {
+
 		repository.save(course);
 	}
 
-	
-	//update/replace the resource (course)
-	@PutMapping("/course/{id}")
-	public void updateCourse(@PathVariable long id, @RequestBody Course course) {
-		
-		repository.save(course);
-	}
-	
-	//Delete - delete a resource (course)
-	
+	// Delete - delete a resource (course)
+
 	@DeleteMapping("/course/{id}")
-	public void deleteCourse(@PathVariable long id) {
-		
+	public void deleteCourse(@PathVariable Long id) {
+
 		repository.deleteById(id);
 	}
-	
+
 }
-
-
-
-
-
-
-
